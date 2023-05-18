@@ -550,7 +550,20 @@ content: "";
 
 
 
+.title1{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: #6179ef ;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
 
+    padding: 20px;
+    margin: auto;
+    border-top-left-radius: 100rem;
+    border-bottom-left-radius: 100rem;
+    border-radius: 100rem;
+}
 /* end landing*/
 
 
