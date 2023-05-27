@@ -748,29 +748,31 @@ animation-delay: 200ms;
         width: 100%;
     }
     .container-porfolio .hexagonAre .hexagon{
-        width: 70px;
-        height: 90px;
+        width: 45px;
+        height: 60px;
     }
     .container-porfolio .hexagonAre .hexagon{
         margin: 15px;
     }
     .container-porfolio .hexagonAre .hexagon h3{
         font-size: 7px;   
+        text-align: center;
+        align-items: center;
     }
     .container-porfolio .hexagonAre .hexagon.Digital-markting {
         font-size: 5px;
     }
     .container-porfolio .hexagonAre .hexagon.Digital-markting h3{
-        font-size: 10;
+        font-size: 5px;
         align-items: center;
         text-align: center;
     }
   
         .container-porfolio .hexagonAre.last{
-            transform: translateY(-20px);
-         }
+            transform: translateY(-10px);
+         }  
          .container-porfolio .hexagonAre .hexagon i{
-            font-size: 15px;
+            font-size: 10px;
          }
          .container-porfolio .hexagonAre .hexagon:hover h3{
             font-size: 9px;
@@ -814,8 +816,8 @@ animation-delay: 200ms;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     gap: 30px;
     background-color:#00ff9535;
-    border-radius: 90% 0 0 0  ;
-    height: 50%;
+    border-radius: 90% 0 90% 0  ;
+    height: 10%;
     /* background-color:#6658ff; */
 }
 .pricing .box{
@@ -823,10 +825,14 @@ animation-delay: 200ms;
     text-align: center;
     display: flex;
     /* flex-wrap: wrap; */
+    height: fit-content;
     flex-direction: column;
     padding: 15px ;
     margin: 0px 10% ;
     border: 2px solid ;
+    border-radius: 2%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
     transition: 0.9s;
     /* opacity: 1;   */
     color:whitesmoke;
@@ -953,6 +959,7 @@ animation-delay: 200ms;
     padding:10px 60px ;
     cursor: pointer;
     z-index: 0;
+   
    
 } 
 
@@ -1097,6 +1104,7 @@ transition: 0.5s;
     color:#6658ff ; 
     border-color: #6658ff;
     transition: 0.9s;
+    
 }
 /* .btn-send{
     border: 2px solid white;
