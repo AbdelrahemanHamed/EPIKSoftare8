@@ -708,20 +708,23 @@ animation-delay: 200ms;
     
 }
 .container-porfolio .hexagonAre .hexagon:hover{
-    background-color: deepskyblue;
+    background-image: linear-gradient(to top right ,deepskyblue, pink);
     transform: scale(0.8);
     font-size: xx-small;
+    
    
 }
 .container-porfolio .hexagonAre .hexagon.Digital-markting:hover{
-    background-color: deepskyblue;
+   background-image: linear-gradient(to top right ,deepskyblue, pink);
     transform: scale(0.8);
     font-size: xx-small;
+   
    
 }
 .container-porfolio .hexagonAre .hexagon:hover h3{
     font-size: 20px;
     margin-top: 20px;
+   
 }
 .container-porfolio .hexagonAre .hexagon.Digital-markting:hover h3{
     font-size: 15px;
@@ -1433,17 +1436,17 @@ flex: auto;
     flex-wrap: wrap;
     padding: 10px;
     padding-top: 20px;
-    background-color: #fffdfd;
+   
     color: #212121;
     width: 80%;
     border: solid gray 0px;
     border-bottom-width:  10px;
-    border-top-width:  10px;
+    /* border-top-width:  10px; */
     border-bottom-left-radius: 50px ;
-    border-top-left-radius: 50px ;
+    /* border-top-left-radius: 50px ; */
     border-bottom-right-radius:50px ;
     border-top-right-radius:50px ;
-    background-color: rgba(128, 128, 128, 0.082);
+    background:linear-gradient(360deg,rgb(215, 189, 189) 20%,white 70%);
 }
 .body-p-aboutus{
     padding-top: 20px;
