@@ -20,7 +20,8 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 // **********************************************
 // **********************************************
-const faders = document.querySelectorAll(".fade-in");
+const faders = document.querySelectorAll(".fade-in1");
+const faders2 = document.querySelectorAll(".fade-in2");
 const sliders = document.querySelectorAll(".slide-in");
 const appearOptions = {
   threshold: 0,
@@ -43,6 +44,9 @@ const appearOnScroll = new IntersectionObserver(function(
 appearOptions);
 
 faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+faders2.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
@@ -82,3 +86,54 @@ darkModeToggle.addEventListener('click', () => {
 });
 
 
+//************************************************************************************** */
+let TheCanvas = document.getElementById('our-canvas'),
+  
+theContext = TheCanvas.getContext('2d'),
+thwGradient = TheCanvas.CreatelinerGradient();
+
+
+theContext.fillStyle='#F00';
+
+
+theContext.fillRect(x, y, TheCanvas.width, TheCanvas.hight);
+//************************************************************************************** */
+
+const restartButton = document.querySelector(".reset");
+
+restartButton.addEventListener(
+    "click",
+    () => {
+        const textAnimation = document.querySelector(".text-stroke");
+
+        setAnimationName(textAnimation, "none");
+        requestAnimationFrame(() =>
+            setTimeout(() => setAnimationName(textAnimation, ""), 0)
+        );
+    },
+    false
+);
+
+const setAnimationName = (element, animationName) => {
+    if (element) {
+        element.style.animationName = animationName;
+    }
+};
+
+
+
+// ************************************************************
+var str = document.getElementsByTagName('div')[0].innerHTML.toString();
+var i = 0;
+document.getElementsByTagName('div')[0].innerHTML = "";
+
+setTimeout(function() {
+    var se = setInterval(function() {
+        i++;
+        document.getElementsByTagName('div')[0].innerHTML = str.slice(0, i) + "|";
+        if (i == str.length) {
+            clearInterval(se);
+            document.getElementsByTagName('div')[0].innerHTML = str;
+        }
+    }, 10);
+},0);
