@@ -2411,7 +2411,7 @@ section:last-of-type {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: -100px;
+    margin-bottom: -50px;
 
     .cont-center{
             position: relative;
