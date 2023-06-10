@@ -48,16 +48,19 @@
    <script>
         function show_pop_Basic(){
             document.getElementById('pop_Basic_100').classList.add('open');
-          
-          
-            
+            document.getElementById('stop').classList.add('noscroll');
+            document.getElementById('nav-bar').classList.add('navbarblock');
+    
+
             
            
         }
+     
 
         function hide_pop_Basic(){
             document.getElementById('pop_Basic_100').classList.remove('open');
-            document.getElementById('blur-it').classList.remove('blur');
+            document.getElementById('stop').classList.remove('noscroll');
+            document.getElementById('nav-bar').classList.remove('navbarblock');
             
            
 
@@ -65,22 +68,37 @@
 
         function show_pop_Advanced(){
             document.getElementById('pop_Advanced_250').classList.add('open');
+            document.getElementById('stop').classList.add('noscroll');
+            document.getElementById('nav-bar').classList.add('navbarblock');
+
+
            
         }
 
         function hide_pop_Advanced(){
             document.getElementById('pop_Advanced_250').classList.remove('open');
+            document.getElementById('stop').classList.remove('noscroll');
+            document.getElementById('nav-bar').classList.remove('navbarblock');
+
            
 
         }
 
         function show_pop_Pro(){
             document.getElementById('pop_Pro_350').classList.add('open');
+            document.getElementById('stop').classList.add('noscroll');
+            document.getElementById('nav-bar').classList.add('navbarblock');
+
+
            
         }
 
         function hide_pop_Pro(){
             document.getElementById('pop_Pro_350').classList.remove('open');
+            document.getElementById('stop').classList.remove('noscroll');
+            document.getElementById('nav-bar').classList.remove('navbarblock');
+
+            
         }
        </script> 
        
@@ -92,12 +110,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;700;1000&family=Rajdhani:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,200;0,400;0,500;0,600;0,800;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body id="blur-it">
+<body id="stop">
     <script src="js/bootstrap.bundle.min.js"></script>
     
     <!-- start header -->
    <header class="scrolled">
-    <nav class="dnav">
+    <nav id="nav-bar" class="dnav">
 
     <div  id="blur-it" class="header">
 
@@ -231,12 +249,81 @@
                  <br>
                  <br>
                  <br>
-                
-                  
- <h2 class="main-title start"  ></h2>
+                 <h2 class="main-title start scroll"  ></h2>
+ 
 
 
-<div id="service" class="title1 slide-in from-left"> OUR SERVICES</div>
+                                            <!-- start circule scroll -->
+
+            <div class="line-conat">
+                <!-- <svg viewBox="0 0 984 2468" fill="none" preserveAspectRatio="xMidYMax meet">
+                    <path d="M23.7196 0V108.544H816.38V298.121C793.156 303.623 746.707 325.132 746.707 367.149C746.707 409.166 715.068 477.694 699.248 506.705V575.233C706.653 592.574 731.964 616.85 773.97 575.233C826.478 523.212 684.607 447.681 664.916 467.189C649.164 482.796 658.353 545.721 664.916 575.233H14.1269V863.85C33.144 836.506 87.7383 798.224 153.978 863.85C220.219 929.477 181.578 986.233 153.978 1006.41C128.566 1016.91 71.3802 1031.62 45.9343 1006.41C14.1269 974.895 77.7417 904.867 45.9343 904.867C20.4883 904.867 75.3855 1002.24 106.015 1050.93H880.5L891.102 1623.16H623.516V1090.44H328.162V1602.15V1660.17H1V1845.75H264.042H381.174V2113.36V2374.46H31.2928V2467H253.44H984" stroke="black"/>
+                    </svg> -->
+
+                    <!-- <svg width="710" height="694" viewBox="0 0 710 694" fill="none" >
+                        <ellipse cx="355" cy="347" rx="355" ry="347" fill="#D9D9D9"/>
+                        <path d="M496.308 96.8643L478.729 86.7526C458.015 74.8378 435.524 66.3234 412.113 61.5338C397.377 58.519 382.374 57 367.333 57H345.646L319.613 59.9412C302.312 61.8958 285.285 65.7857 268.852 71.538L256.967 75.6981C241.525 81.1034 226.445 88.025 212.26 96.1781C201.312 102.471 190.704 109.628 180.784 117.441C165.865 129.19 152.277 142.536 140.261 157.241L126.439 174.156C119.773 182.315 113.736 190.968 108.38 200.041C102.826 209.45 98.0225 219.282 94.0131 229.446L86.1136 249.471L77.5568 281.392L74.062 298.343C70.6961 314.669 69 331.296 69 347.965C69 363.522 70.4771 379.043 73.4116 394.321L77.5568 415.902L90.7546 457.941C99.4175 478.095 110.667 497.036 124.22 514.285L142.805 537.939C150.836 548.161 159.583 557.799 168.98 566.781L177.7 575.117C195.5 592.132 216.187 605.84 238.793 615.601C255.568 622.844 273.227 627.838 291.311 630.454L295.9 631.118L306.055 633.038C319.994 635.674 334.149 637 348.335 637C370.26 637 392.071 633.831 413.09 627.592L446.659 617.627L457.55 613.899C482.822 605.246 506.626 592.788 528.141 576.956C545.304 564.326 560.867 549.655 574.486 533.265L575.55 531.984C588.59 516.292 599.852 499.202 609.129 481.03L612.072 475.264C622.514 454.809 630.249 433.082 635.08 410.63C639.016 392.34 641 373.684 641 354.976V351.196V338.336C641 320.033 639.059 301.781 635.208 283.888C630.293 261.048 622.309 238.979 611.472 218.282L607.811 211.289C596.808 190.274 583.48 170.561 568.077 152.521L563.264 146.882L559.66 143.539C540.37 125.642 519.117 109.985 496.308 96.8643Z" stroke="#230C81" stroke-width="100"/>
+                        </svg>
+                     -->
+                     <svg viewBox="0 0 198 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="99" cy="89" rx="86" ry="76" fill="#D9D9D9" fill-opacity="0.19" stroke="#0E00B0" stroke-opacity="0.17" stroke-width="25"/>
+                        <path d="M185 89C185 98.9805 182.776 108.863 178.454 118.084C174.132 127.305 167.797 135.683 159.811 142.74C151.825 149.797 142.345 155.395 131.911 159.215C121.477 163.034 110.294 165 99 165C87.7063 165 76.5232 163.034 66.0892 159.215C55.6552 155.395 46.1747 149.797 38.1888 142.74C30.203 135.683 23.8683 127.305 19.5464 118.084C15.2245 108.863 13 98.9805 13 89C13 79.0195 15.2245 69.1368 19.5464 59.9161C23.8683 50.6953 30.203 42.3171 38.1888 35.2599C46.1747 28.2026 55.6552 22.6045 66.0892 18.7852C76.5232 14.9658 87.7063 13 99 13C110.294 13 121.477 14.9658 131.911 18.7852C142.345 22.6045 151.825 28.2026 159.811 35.2599C167.797 42.3171 174.132 50.6953 178.454 59.9161C182.776 69.1368 185 79.0196 185 89L185 89Z" stroke="#0E00B0" stroke-width="25" stroke-linecap="round"/>
+                        </svg>
+                        
+                        
+                        
+                        
+                    
+            </div>
+            <style>
+              
+            </style>
+            <script>
+                let path = document.querySelector('path')
+                let pathLength = path.getTotalLength()
+
+
+                path.style.strokeDasharray = pathLength+ ' ' +pathLength;
+        
+
+                path.style.strokeDashoffset = pathLength;
+
+                window.addEventListener('scroll', () => {
+                    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+                    var drawLength = pathLength * scrollPercentage;
+
+                    path.style.strokeDashoffset = pathLength - drawLength;
+
+                    const target = document.querySelectorAll('.scroll');
+
+                    var index = 0, length = target.length;
+                    for(index;index < length; index++){
+                        var pos = window.pageYOffset * target[index].dataset.rate;
+
+                        if(target[index].dataset.direction === 'vertical'){
+                            target[index].style.transform = 'translate3d(0px,'+pos+'px, 0px)';
+
+                        } else {
+                            var posX = window.pageYOffset * target[index].dataset.ratex;
+                            var posY = window.pageYOffset * target[index].dataset.ratey;
+
+                            target[index].style.transform = 'translate3d('+posX+'px, '+posY+'px,0px)';
+                        }
+                    }
+
+                } )
+        </script>
+ 
+ 
+ 
+ 
+ 
+
+
+
+<div id="path" class="title1 slide-in from-left" data-rate="0.4"> OUR SERVICES</div>
+
  <!-- <div class="service-color">
 <div id="service" class="services">
                             
@@ -296,7 +383,7 @@
 </div>
   <!-- Start portfoli -->
   <!-- <div class="container"> -->
-        <div class=" container-porfolio container">
+        <div class=" container-porfolio container scroll">
 
             <div class="hexagonAre first">
 
@@ -348,12 +435,131 @@
         </div>
     <!-- </div> -->
 <!-- End   portfoli -->
+
+<div class="intro scroll">
+    <h3> Why Epik ?</h3>
+    
+
+    <p> 
+        strong reputation in delivering high-quality solutions.
+         Our expertise and skills in software development give them confidence in Our ability to meet their requirements. 
+         Our competitive pricing and customization options make Our services attractive.
+          Effective communication and collaboration, along with a track record of past successes, further influence their decision.
+           Additionally, Our industry knowledge and comprehensive support offerings set you apart from competitors.
+    </p>
+    <!-- <div class="img-gradiant">
+    <img src="./img/christopher-gower-m_HRfLhgABo-unsplash.jpg" alt=""> -->
+
+    </div> 
+        
+</div>
+
+
+
+<!-- <section class="three">
+  <div class="nums">
+    <div class="counter-inc">
+        <i class="fa-solid fa-code fa-2xl"></i>
+        <div class="num" data-goal="157">0</div>
+        <h3>Projects</h3>
+
+     </div>
+     
+     <div class="counter-inc">
+        <i class="fa-sharp fa-solid fa-users fa-2xl"></i>
+        <div class="num" data-goal="121">0</div>
+        <h3>Clints</h3>
+        <span class="border-count"></span>
+
+    </div>
+
+    <div class="counter-inc">       
+        <i class="fa-solid fa-earth-americas fa-2xl"></i>
+              <div class="num" data-goal="14">0</div>
+              <h3>Countries</h3>
+
+    </div>
+  </div>
+</section> -->
+
+<!-- <div class="three">
+  <div class="nums">
+         <div class="cont-cont">
+                <i class="fa-solid fa-code fa-2xl"></i>
+                <div class="num" data-goal="157">0</div>
+                <h3>Projects</h3>
+            </div>
+        <div class="cont-cont">
+                <i class="fa-sharp fa-solid fa-users fa-2xl"></i>
+                <div class="num" data-goal="121">0</div>
+                <h3>Clints</h3>
+    
+            </div>
+        <div class="cont-cont">
+                <i class="fa-solid fa-earth-americas fa-2xl"></i>
+                <div class="num" data-goal="14">0</div>
+                <h3>Countries</h3>
+            </div>
+    </div>
+</div> -->
+<div class="stats-counter">
+    <h1>Our </h1>
+    <h2> Stats</h2>
+</div>
+<div class="three container">
+    <div class="cont-center">
+    <div class="cont-cont">
+        <i class="fa-solid fa-code fa-2xl"></i>
+        <div class="num" data-goal="157">0</div>
+        <h3>Projects</h3>
+    </div>
+    <div class="cont-cont">
+        <i class="fa-sharp fa-solid fa-users fa-2xl"></i>
+        <div class="num" data-goal="121">0</div>
+        <h3>Clints</h3>
+        </div>
+        <div class="cont-cont">
+            <i class="fa-solid fa-earth-americas fa-2xl"></i>
+            <div class="num" data-goal="14">0</div>
+            <h3>Countries</h3>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+   let nums = document.querySelectorAll(".three .num");
+let section = document.querySelector(".three");
+let started = false; // Function Started ? No
+
+window.onscroll = function () {
+  if (window.scrollY >= section.offsetTop) {
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
+  }
+};
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+    </script>
                 <!-- start pricing -->
             
- <div class="Pricing-background">
+ <div class="Pricing-background scroll">
                 <div  id="prices" class="pricing">
                     <div class="hidden">
-                              <h2 class="main-title">Pricing Plans</h2>
+                              <!-- <h2 class="main-title">Pricing Plans</h2> -->
+                              <h2 class="title1"> Pricing  Plans </h2>
                     </div>  
             <div class="container ">
                 <div class="box">
@@ -364,7 +570,7 @@
                 <div class="hidden">
                     <h3 style="color: white;" class="title">Basic</h3>
                     <div class="price">
-                        <span class="amount">$100</span>
+                        <span class="amount">Start from $100</span>
                     </div>
                     <ul> 
                         <li>Website</li>
@@ -426,7 +632,7 @@
                     <div class="hidden">
                     <h3 style="color: white;" class="title">Advanced</h3>
                     <div class="price">
-                        <span class="amount">$250</span>
+                        <span class="amount">Start from $250</span>
                         
                     </div>
                     <ul> 
@@ -490,7 +696,7 @@
                    <div class="hidden">
                     <h3  style="color: white;" class="title">Professional</h3>
                     <div class="price">
-                        <span class="amount">$350</span>
+                        <span class="amount">Start from $350</span>
                         
                     </div>
                     <ul>
@@ -625,10 +831,10 @@
     <div class="responsive-container-block bigContainer">
         <div class="responsive-container-block Container">
           <div class="responsive-container-block leftSide">
-            <p class="text-blk heading">
+            <p class="text-blk heading scroll">
               Meet Our Creative Team
             </p>
-            <p class="text-blk subHeading">
+            <p class="text-blk subHeading scroll">
                 <strong>Welcome to EPIK</strong> , your go-to partner for extending your business's reach on the internet.<br><br>  
                 In this digital age, establishing a strong online presence is essential for success,
                  and we are here to help you navigate and excel in the virtual landscape.
@@ -640,6 +846,7 @@
                       </p>
           </div>
           <div class="responsive-container-block rightSide">
+            
             <img class="number1img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET32.jpg">
             <img class="number2img" src="./img/alessandro-bianchi-_kdTyfnUFAc-unsplash.jpg">
             <img class="number3img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/b245.png">
@@ -652,7 +859,22 @@
         </div>
       </div>
    
+      
+<!-- <ul class="dial-menu">
+  <ul class="inner-dial1">
+  </ul>
+  <ul class="inner-dial2">
+  </ul>
+  <ul class="inner-dial3">
+  </ul> -->
 
+  <!-- <li><span class="dot">00</span><a href="#" class="on">About us<small>All about us</small></a></li>
+  <li class="to"><span class="dot">01</span><a href="#" class="two">Who we are</a></li>
+  <li class="th"><span class="dot">02</span><a href="#">What we do</a></li>
+  <li class="fo"><span class="dot">03</span><a href="#">Our Projects are</a></li>
+  <li class="fi"><span class="dot">04</span><a href="#">Our Clients</a></li>
+   
+</ul> -->
 
         <!-- start footer -->
         <footer class="new_footer_area bg_color">
