@@ -572,6 +572,8 @@ content: "";
     border-radius: 10px;
     background-image: url("../img/pexels-rodolfo-clix-1036936.jpg");
     padding: 15px;
+    color: white;
+
 }
 .intro img{
     width: 40px;
@@ -580,7 +582,9 @@ content: "";
     font-style: italic;
     font-weight: bolder;
     text-shadow: 10px 10px 20px rgba(255, 255, 255, 0.755);
-    
+    color: white;
+
+
 }
 .intro p{
     line-height: 30px;
@@ -590,10 +594,19 @@ content: "";
 }
 @media (max-width: 767px) {
     .intro{
-        
+        width: 90%;
+        flex-wrap: wrap;
+        background-color: #000000;
+        color: white;
+        margin: 0px;
+        margin-left: 5%;
+        margin-bottom: 20%;
+        margin-top: 20%;
     }
     .intro img{
         display: none;
+        
+        
     }
     .intro p{
         line-height: 30px;
@@ -602,8 +615,8 @@ content: "";
 }
 .intro img{
     
-    width: 500px;
-    margin-left: 50%;
+    width: 600px;
+    margin-left: 10%;
     background-image: linear-gradient(to bottom, #000000, #ffffff);
 
 }
@@ -1443,7 +1456,7 @@ h1, h2, h3, h4, h5, h6 {
      margin-bottom: 10px;
 }
 /*************footer End*****************/
-.hidden{
+/* .hidden{
     opacity: 0 ;
     transition: all 0.5s;
     filter: blur(1px);
@@ -1482,7 +1495,7 @@ h1, h2, h3, h4, h5, h6 {
     .hidden {
         transition: none;
     }
-}
+} */
 
     /********************start about us ******************/
 .aboutus .container{
